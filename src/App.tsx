@@ -1,4 +1,4 @@
-import { AppProvider } from '@/Contexts/AppContext'
+import { AppProvider } from '@/Contexts/App.context'
 
 import HomePage from '@/Pages/Home'
 
