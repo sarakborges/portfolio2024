@@ -1,0 +1,4 @@
+.dark-theme {
+  --font-color: #c9c6e2;
+  --bg-color: var(--color-primary);
+}

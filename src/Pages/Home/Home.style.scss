@@ -1,0 +1,16 @@
+#home-page {
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  min-height: 100vh;
+
+  background-color: var(--bg-color);
+
+  > p {
+    font-size: var(--size-md);
+    font-weight: var(--font-weight-normal);
+    font-family: var(--font-family);
+    color: var(--font-color);
+  }
+}

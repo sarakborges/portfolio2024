@@ -1,0 +1,4 @@
+.light-theme {
+  --font-color: var(--color-primary);
+  --bg-color: #c9c6e2;
+}
