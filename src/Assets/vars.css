@@ -4,6 +4,9 @@
   --color-cancel: #fd49a0;
 
   --button-text-color: #e4e1e8;
+  --button-primary-disabled: #443d6f;
+  --button-secondary-disabled: #6d9a9d;
+  --button-cancel-disabled: #ce90ae;
 
   --size-xs: 4px;
   --size-sm: 8px;

@@ -1,0 +1,43 @@
+.toggle-theme {
+  display: flex;
+
+  > .button-component {
+    padding: 0;
+
+    border-radius: var(--size-lg);
+
+    &:not(:disabled):not(.transparent) {
+      background-color: var(--button-primary-disabled);
+      border-color: var(--button-primary-disabled);
+    }
+
+    > p {
+      display: flex;
+
+      padding: var(--size-sm);
+
+      border-radius: 100%;
+
+      transition: background-color 0.3s;
+
+      &:not(.disabled) {
+        background-color: var(--button-text-color);
+
+        > svg {
+          fill: var(--primary-disabled);
+        }
+      }
+
+      &.disabled > svg {
+        fill: var(--button-text-color);
+      }
+
+      > svg {
+        width: var(--size-lmd);
+        height: var(--size-lmd);
+
+        transition: fill 0.3s;
+      }
+    }
+  }
+}

@@ -1,26 +1,23 @@
-import './Button.style.scss'
+import { IButtonComponent } from './Button.type'
 
-interface IButtonComponent {
-  children: string | JSX.Element
-  type?: 'submit' | 'reset'
-  style?: 'primary' | 'secondary' | 'cancel'
-  transparent?: boolean
-  onClick?: () => void
-}
+import './Button.style.scss'
 
 const ButtonComponent: React.FC<IButtonComponent> = ({
   children,
   style,
   transparent,
+  round,
   ...rest
 }) => {
+  const buttonClasses = [
+    'button-component',
+    style || 'primary',
+    transparent ? 'transparent' : '',
+    round ? 'round' : ''
+  ].join(' ')
+
   return (
-    <button
-      className={`button-component ${style || 'primary'} ${
-        transparent ? 'transparent' : ''
-      }`}
-      {...rest}
-    >
+    <button className={buttonClasses} {...rest}>
       {children}
     </button>
   )

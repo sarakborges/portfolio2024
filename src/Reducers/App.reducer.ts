@@ -1,4 +1,4 @@
-import { DARK_THEME, LIGHT_THEME } from '@/Consts'
+import { DARK_THEME, LIGHT_THEME, LOCAL_STORAGE_KEY_THEME } from '@/Consts'
 
 import { IAppContext } from '@/Types/AppContext.type'
 
@@ -19,9 +19,13 @@ const reducerActions = {
     prevState: IAppContext
     newValue?: any
   }) => {
+    const newTheme = prevState?.theme !== DARK_THEME ? DARK_THEME : LIGHT_THEME
+
+    localStorage.setItem(LOCAL_STORAGE_KEY_THEME, newTheme)
+
     return {
       ...prevState,
-      theme: prevState?.theme !== DARK_THEME ? DARK_THEME : LIGHT_THEME
+      theme: newTheme
     }
   }
 }

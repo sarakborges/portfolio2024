@@ -1,30 +1,16 @@
-import { useContext } from 'react'
-
-import { AppContext } from '@/Contexts/App.context'
-import { AppReducerActions } from '@/Reducers/App.reducer'
-
-import ButtonComponent from '@/Components/System/Button'
+import ToggleThemeComponent from '@/Components/App/ToggleTheme'
+import PictureComponent from '@/Components/System/Picture'
 
 import './Topbar.style.scss'
 
 const TopbarComponent: React.FC = () => {
-  const { appDispatch } = useContext(AppContext)
-
-  const toggleTheme = () => {
-    appDispatch({
-      actionType: AppReducerActions.TOGGLE_THEME
-    })
-  }
-
   return (
     <nav id="topbar">
-      <p>Sara Borges</p>
+      <PictureComponent src="picture.png" alt="Profile picture" round />
 
       <ul>
         <li>
-          <ButtonComponent onClick={toggleTheme} style="secondary">
-            Toggle theme
-          </ButtonComponent>
+          <ToggleThemeComponent />
         </li>
       </ul>
     </nav>
