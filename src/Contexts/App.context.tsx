@@ -1,12 +1,13 @@
-import { createContext, Dispatch, SetStateAction, useState } from 'react'
+import { createContext, Dispatch, useReducer, useState } from 'react'
 
 import { DARK_THEME, LOCAL_STORAGE_KEY_THEME } from '@/Consts'
 
 import { IAppContext } from '@/Types/AppContext.type'
+import { AppReducer } from '@/Reducers/App.reducer'
 
 interface IinitialState {
   appValue: IAppContext
-  setAppValue: Dispatch<SetStateAction<IAppContext>>
+  appDispatch: Dispatch<any>
 }
 
 const initialState: IinitialState = {
@@ -14,7 +15,7 @@ const initialState: IinitialState = {
     theme: DARK_THEME
   },
 
-  setAppValue: () => {}
+  appDispatch: () => {}
 }
 
 export const AppContext = createContext<IinitialState>(initialState)
@@ -22,13 +23,13 @@ export const AppContext = createContext<IinitialState>(initialState)
 export const AppProvider = ({ children }: { children: JSX.Element }) => {
   const theme = localStorage.getItem(LOCAL_STORAGE_KEY_THEME)
 
-  const [appValue, setAppValue] = useState<IAppContext>({
+  const [appValue, appDispatch] = useReducer(AppReducer, {
     ...initialState.appValue,
     theme: theme || DARK_THEME
   })
 
   return (
-    <AppContext.Provider value={{ appValue, setAppValue }}>
+    <AppContext.Provider value={{ appValue, appDispatch }}>
       {children}
     </AppContext.Provider>
   )
