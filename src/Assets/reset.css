@@ -139,4 +139,6 @@ img {
 body {
   font-optical-sizing: auto;
   font-style: normal;
+
+  font-family: var(--font-family);
 }
