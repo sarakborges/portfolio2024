@@ -7,10 +7,17 @@
 
   background-color: var(--bg-color);
 
+  color: var(--font-color);
+
+  transition: background-color 0.3s, color 0.3s;
+
   > p {
     font-size: var(--size-md);
     font-weight: var(--font-weight-normal);
     font-family: var(--font-family);
-    color: var(--font-color);
+  }
+
+  > button {
+    font-size: var(--size-md);
   }
 }
