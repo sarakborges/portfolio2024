@@ -1,0 +1,19 @@
+#topbar {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 100%;
+
+  > p {
+    padding: 0 var(--size-smd);
+
+    font-size: var(--size-lmd);
+    font-weight: var(--font-weight-light);
+  }
+}

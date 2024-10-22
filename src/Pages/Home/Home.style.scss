@@ -1,7 +1,7 @@
 #home-page {
   display: flex;
   place-content: center;
-  place-items: center;
+  flex-flow: column;
 
   min-height: 100vh;
 
@@ -11,13 +11,7 @@
 
   transition: background-color 0.3s, color 0.3s;
 
-  > p {
-    font-size: var(--size-md);
-    font-weight: var(--font-weight-normal);
-    font-family: var(--font-family);
-  }
-
-  > button {
-    font-size: var(--size-md);
+  > section {
+    flex: 1;
   }
 }

@@ -1,7 +1,9 @@
 :root {
   --color-primary: #3d2bb3;
   --color-secondary: #209da3;
-  --color-tertiary: #fd49a0;
+  --color-cancel: #fd49a0;
+
+  --button-text-color: #e4e1e8;
 
   --size-xs: 4px;
   --size-sm: 8px;
