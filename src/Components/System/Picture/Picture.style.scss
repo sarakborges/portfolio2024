@@ -1,0 +1,11 @@
+.picture-component {
+  &.round {
+    > img {
+      border-radius: 100%;
+    }
+  }
+
+  > img {
+    max-width: 100%;
+  }
+}

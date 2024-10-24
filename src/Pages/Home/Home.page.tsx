@@ -1,24 +1,21 @@
 import { useContext } from 'react'
 
 import { AppContext } from '@/Contexts/App.context'
-import { AppReducerActions } from '@/Reducers/App.reducer'
+
+import TopbarComponent from '@/Components/App/Topbar'
 
 import './Home.style.scss'
 
-export default function HomePage() {
-  const { appValue, appDispatch } = useContext(AppContext)
-
-  const toggleTheme = () => {
-    appDispatch({
-      actionType: AppReducerActions.TOGGLE_THEME
-    })
-  }
+const HomePage = () => {
+  const { appValue } = useContext(AppContext)
 
   return (
     <main id="home-page" className={appValue?.theme}>
-      <button onClick={toggleTheme}>Toggle theme</button>
+      <TopbarComponent />
 
-      <p>YEE HAW</p>
+      <section></section>
     </main>
   )
 }
+
+export default HomePage

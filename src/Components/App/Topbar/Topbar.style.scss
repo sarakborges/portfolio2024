@@ -1,0 +1,28 @@
+#topbar {
+  display: flex;
+  place-content: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 100%;
+
+  background-color: var(--bg-color);
+
+  transition: background-color 0.3s;
+
+  > .topbar-wrapper {
+    display: flex;
+    place-content: space-between;
+    place-items: center;
+
+    width: var(--body-wrapper);
+    padding-left: var(--size-sm);
+
+    > .picture-component {
+      width: var(--size-xl);
+    }
+  }
+}
