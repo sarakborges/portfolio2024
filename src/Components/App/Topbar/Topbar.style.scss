@@ -24,5 +24,29 @@
     > .picture-component {
       width: var(--size-xl);
     }
+
+    > .button-component {
+      display: none;
+
+      > svg {
+        width: var(--size-lg);
+        height: var(--size-lg);
+      }
+    }
+
+    @media (width < 900px) {
+      flex-flow: column;
+      place-items: start;
+
+      padding: 0;
+
+      > .picture-component {
+        display: none;
+      }
+
+      > .button-component {
+        display: flex;
+      }
+    }
   }
 }
