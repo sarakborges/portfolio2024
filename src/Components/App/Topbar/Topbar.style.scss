@@ -1,7 +1,6 @@
 #topbar {
   display: flex;
-  place-content: space-between;
-  place-items: center;
+  place-content: center;
 
   position: sticky;
   top: 0;
@@ -9,17 +8,21 @@
   z-index: 99;
 
   width: 100%;
-  padding-left: var(--size-sm);
 
   background-color: var(--bg-color);
 
   transition: background-color 0.3s;
 
-  > .picture-component {
-    width: var(--size-xl);
-  }
+  > .topbar-wrapper {
+    display: flex;
+    place-content: space-between;
+    place-items: center;
 
-  > ul {
-    padding: var(--size-sm);
+    width: var(--body-wrapper);
+    padding-left: var(--size-sm);
+
+    > .picture-component {
+      width: var(--size-xl);
+    }
   }
 }

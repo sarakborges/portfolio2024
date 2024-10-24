@@ -1,0 +1,33 @@
+.topbar-menu {
+  display: flex;
+  place-items: center;
+
+  padding: 0 var(--size-sm);
+
+  > li {
+    &.toggle-theme-wrapper {
+      padding: var(--size-sm) 0 var(--size-sm) var(--size-md);
+    }
+
+    > a {
+      display: flex;
+      place-items: center;
+
+      height: calc(var(--size-xl) + var(--size-sm) * 2);
+      padding: 0 var(--size-md);
+
+      font-size: var(--size-md);
+      color: var(--font-color);
+      text-decoration: none;
+
+      background-color: var(--bg-color);
+
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: var(--font-color);
+        color: var(--bg-color);
+      }
+    }
+  }
+}

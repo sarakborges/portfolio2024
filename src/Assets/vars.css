@@ -16,6 +16,8 @@
   --size-lg: 36px;
   --size-xl: 48px;
 
+  --body-wrapper: clamp(320px, 1160px, 100%);
+
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;

@@ -38,6 +38,7 @@ const ToggleThemeComponent: React.FC = () => {
           {buttons.map((buttonItem) => (
             <p
               className={appValue.theme === buttonItem.theme ? 'disabled' : ''}
+              key={buttonItem.theme}
             >
               {buttonItem.icon}
             </p>
