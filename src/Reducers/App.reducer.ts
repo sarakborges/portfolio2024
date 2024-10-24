@@ -10,7 +10,8 @@ import { IReducer } from '@/Types/Reducer.type'
 import { IReducerActions } from '@/Types/ReducerActions.type'
 
 export const AppReducerActions = {
-  TOGGLE_THEME: 'TOGGLE_THEME'
+  TOGGLE_THEME: 'TOGGLE_THEME',
+  CHANGE_LANGUAGE: 'CHANGE_LANGUAGE'
 }
 
 const reducerActions = {
@@ -25,7 +26,7 @@ const reducerActions = {
     }
   },
 
-  TOGGLE_LANGUAGE: ({ prevState, newValue }: IReducerActions<IAppContext>) => {
+  CHANGE_LANGUAGE: ({ prevState, newValue }: IReducerActions<IAppContext>) => {
     const newLanguage = newValue
 
     localStorage.setItem(LOCAL_STORAGE_KEY_LANGUAGE, newLanguage)

@@ -9,6 +9,12 @@
       padding: var(--size-sm) 0 var(--size-sm) var(--size-md);
     }
 
+    &.change-language-wrapper {
+      display: flex;
+
+      padding-left: var(--size-md);
+    }
+
     > a {
       display: flex;
       place-items: center;

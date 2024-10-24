@@ -1,12 +1,29 @@
+import { useContext } from 'react'
+
 import { getText } from '@/Utils'
 
-import { TOPBAR_MENU_ITEMS } from '@/Consts'
+import { LANGUAGE_EN, LANGUAGE_PT, TOPBAR_MENU_ITEMS } from '@/Consts'
+
+import { AppContext } from '@/Contexts/App.context'
+import { AppReducerActions } from '@/Reducers/App.reducer'
 
 import ToggleThemeComponent from '@/Components/App/ToggleTheme'
+import ButtonComponent from '@/Components/System/Button'
 
 import './TopbarMenu.style.scss'
 
 const TopbarMenuComponent: React.FC = () => {
+  const { appDispatch, appValue } = useContext(AppContext)
+
+  const languages = [LANGUAGE_PT, LANGUAGE_EN]
+
+  const changeLanguage = (newLanguage: string) => {
+    appDispatch({
+      actionType: AppReducerActions.CHANGE_LANGUAGE,
+      newValue: newLanguage
+    })
+  }
+
   return (
     <ul className="topbar-menu">
       {TOPBAR_MENU_ITEMS.map((item) => (
@@ -17,6 +34,20 @@ const TopbarMenuComponent: React.FC = () => {
 
       <li className="toggle-theme-wrapper">
         <ToggleThemeComponent />
+      </li>
+
+      <li className="change-language-wrapper">
+        {languages.map((language) => (
+          <ButtonComponent
+            style="secondary"
+            disabled={language === appValue.language}
+            onClick={() => {
+              changeLanguage(language)
+            }}
+          >
+            {language.toUpperCase()}
+          </ButtonComponent>
+        ))}
       </li>
     </ul>
   )
