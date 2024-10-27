@@ -40,7 +40,6 @@ const TopbarMenuComponent: React.FC = () => {
         {languages.map((language) => (
           <ButtonComponent
             key={language}
-            style="secondary"
             disabled={language === appValue.language}
             onClick={() => {
               changeLanguage(language)

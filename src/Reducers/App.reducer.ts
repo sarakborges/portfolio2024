@@ -11,11 +11,14 @@ import { IReducerActions } from '@/Types/ReducerActions.type'
 
 export const AppReducerActions = {
   TOGGLE_THEME: 'TOGGLE_THEME',
-  CHANGE_LANGUAGE: 'CHANGE_LANGUAGE'
+  CHANGE_LANGUAGE: 'CHANGE_LANGUAGE',
+  TOGGLE_MENU: 'TOGGLE_MENU'
 }
 
 const reducerActions = {
-  TOGGLE_THEME: ({ prevState }: IReducerActions<IAppContext>) => {
+  [AppReducerActions.TOGGLE_THEME]: ({
+    prevState
+  }: IReducerActions<IAppContext>) => {
     const newTheme = prevState?.theme !== DARK_THEME ? DARK_THEME : LIGHT_THEME
 
     localStorage.setItem(LOCAL_STORAGE_KEY_THEME, newTheme)
@@ -26,7 +29,10 @@ const reducerActions = {
     }
   },
 
-  CHANGE_LANGUAGE: ({ prevState, newValue }: IReducerActions<IAppContext>) => {
+  [AppReducerActions.CHANGE_LANGUAGE]: ({
+    prevState,
+    newValue
+  }: IReducerActions<IAppContext>) => {
     const newLanguage = newValue
 
     localStorage.setItem(LOCAL_STORAGE_KEY_LANGUAGE, newLanguage)
@@ -34,6 +40,15 @@ const reducerActions = {
     return {
       ...prevState,
       language: newLanguage
+    }
+  },
+
+  [AppReducerActions.TOGGLE_MENU]: ({
+    prevState
+  }: IReducerActions<IAppContext>) => {
+    return {
+      ...prevState,
+      menuOpen: !prevState?.menuOpen
     }
   }
 }
