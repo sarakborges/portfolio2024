@@ -1,0 +1,33 @@
+#header {
+  display: flex;
+  flex-flow: column;
+  place-items: center;
+  gap: var(--size-xl);
+
+  padding: calc(var(--size-xl) * 3) var(--size-xl) var(--size-xl);
+
+  > section {
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+    gap: var(--size-lmd);
+
+    > h1 {
+      text-align: center;
+      letter-spacing: var(--size-xs);
+      font-size: var(--size-xl);
+      font-weight: var(--font-weight-light);
+    }
+
+    > h2 {
+      text-align: center;
+      letter-spacing: var(--size-xs);
+      font-size: var(--size-lg);
+      font-weight: var(--font-weight-light);
+    }
+  }
+
+  > picture {
+    width: calc(var(--size-xl) * 4);
+  }
+}

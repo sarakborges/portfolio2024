@@ -26,7 +26,7 @@ const TopbarComponent: React.FC = () => {
           ' '
         )}
       >
-        <PictureComponent src="picture.png" alt="Profile picture" round />
+        <PictureComponent src="picture.jpg" alt="Profile picture" round />
 
         <ButtonComponent onClick={toggleMenu}>
           <FiMenu />

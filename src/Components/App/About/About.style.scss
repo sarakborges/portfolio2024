@@ -1,0 +1,19 @@
+#about {
+  display: flex;
+  flex-flow: column;
+  place-items: center;
+  gap: var(--size-lmd);
+
+  width: var(--body-wrapper);
+  padding: calc(var(--size-xl) * 1.5) var(--size-xl) var(--size-xl);
+
+  > h2 {
+    font-size: var(--size-lg);
+  }
+
+  > p {
+    font-size: var(--size-md);
+    line-height: var(--line-height-lg);
+    white-space: pre-wrap;
+  }
+}

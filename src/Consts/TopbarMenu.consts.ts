@@ -1,21 +1,23 @@
+import * as TEXT_TOKENS from '@/Texts/TextTokens'
+
 export const TOPBAR_MENU_ITEMS = [
   {
-    id: 'TOPBAR_MENU_ITEMS_ABOUT',
+    id: TEXT_TOKENS.TOPBAR_MENU_ITEMS_ABOUT,
     anchor: 'about'
   },
 
   {
-    id: 'TOPBAR_MENU_ITEMS_EXPERIENCES',
+    id: TEXT_TOKENS.TOPBAR_MENU_ITEMS_EXPERIENCES,
     anchor: 'experiences'
   },
 
   {
-    id: 'TOPBAR_MENU_ITEMS_TECHNOLOGIES',
+    id: TEXT_TOKENS.TOPBAR_MENU_ITEMS_TECHNOLOGIES,
     anchor: 'technologies'
   },
 
   {
-    id: 'TOPBAR_MENU_ITEMS_CONTACT',
+    id: TEXT_TOKENS.TOPBAR_MENU_ITEMS_CONTACT,
     anchor: 'contact'
   }
 ]
