@@ -1,37 +1,29 @@
 import { useContext } from 'react'
 
-import { getText } from '@/Utils'
-
-import { LANGUAGE_EN, LANGUAGE_PT, TOPBAR_MENU_ITEMS } from '@/Consts'
+import { LANGUAGE_EN, LANGUAGE_PT } from '@/Consts'
 
 import { AppContext } from '@/Contexts/App.context'
-import { AppReducerActions } from '@/Reducers/App.reducer'
+import { ReducerActionsKeys } from '@/Reducers/App.reducer'
 
 import ToggleThemeComponent from '@/Components/App/ToggleTheme'
 import ButtonComponent from '@/Components/System/Button'
 
-import './TopbarMenu.style.scss'
+import './TopbarActions.style.scss'
 
-const TopbarMenuComponent: React.FC = () => {
+const TopbarActionsComponent: React.FC = () => {
   const { appDispatch, appValue } = useContext(AppContext)
 
   const languages = [LANGUAGE_PT, LANGUAGE_EN]
 
   const changeLanguage = (newLanguage: string) => {
     appDispatch({
-      actionType: AppReducerActions.CHANGE_LANGUAGE,
+      actionType: ReducerActionsKeys.CHANGE_LANGUAGE,
       newValue: newLanguage
     })
   }
 
   return (
-    <ul className="topbar-menu">
-      {TOPBAR_MENU_ITEMS.map((item) => (
-        <li key={item.id}>
-          <a href={`#${item.anchor}`}>{getText(item.id)}</a>
-        </li>
-      ))}
-
+    <ul className="topbar-actions">
       <li className="toggle-theme-wrapper">
         <ToggleThemeComponent />
       </li>
@@ -53,4 +45,4 @@ const TopbarMenuComponent: React.FC = () => {
   )
 }
 
-export default TopbarMenuComponent
+export default TopbarActionsComponent

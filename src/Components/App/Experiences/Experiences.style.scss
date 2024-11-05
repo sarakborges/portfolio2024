@@ -1,21 +1,21 @@
-#about {
+#experiences {
   display: flex;
   place-content: center;
 
   width: 100%;
 
-  background-color: var(--color-primary);
-
-  color: var(--color-light);
-
-  > .about-wrapper {
+  > .experiences-wrapper {
     display: flex;
     flex-flow: column;
     place-items: center;
     gap: var(--size-lmd);
 
     width: var(--body-wrapper);
-    padding: 0 var(--size-xl) var(--size-xl);
+    padding: var(--size-xl);
+
+    > h2 {
+      font-size: var(--size-lg);
+    }
 
     > p {
       font-size: var(--size-md);

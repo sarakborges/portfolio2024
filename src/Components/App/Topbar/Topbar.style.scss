@@ -19,33 +19,31 @@
     place-items: center;
 
     width: var(--body-wrapper);
-    padding-left: var(--size-sm);
 
-    > .picture-component {
-      width: var(--size-xl);
-    }
-
-    > .button-component {
-      display: none;
-
-      > svg {
-        width: var(--size-lg);
-        height: var(--size-lg);
-      }
-    }
-
-    @media (width < 900px) {
-      flex-flow: column;
-      place-items: start;
-
-      padding: 0;
+    > section {
+      display: flex;
+      place-items: center;
+      gap: var(--size-md);
 
       > .picture-component {
-        display: none;
+        width: var(--size-xl);
       }
 
       > .button-component {
-        display: flex;
+        display: none;
+
+        > svg {
+          width: var(--size-lg);
+          height: var(--size-lg);
+        }
+      }
+    }
+
+    @media (width < 600px) {
+      > section {
+        > .picture-component {
+          display: none;
+        }
       }
     }
   }
