@@ -9,11 +9,6 @@ import { IAppContext } from '@/Types/AppContext.type'
 import { IReducer } from '@/Types/Reducer.type'
 import { IReducerActions } from '@/Types/ReducerActions.type'
 
-export const AppReducerActions = {
-  TOGGLE_THEME: 'TOGGLE_THEME',
-  CHANGE_LANGUAGE: 'CHANGE_LANGUAGE'
-}
-
 const reducerActions = {
   TOGGLE_THEME: ({ prevState }: IReducerActions<IAppContext>) => {
     const newTheme = prevState?.theme !== DARK_THEME ? DARK_THEME : LIGHT_THEME
@@ -35,10 +30,23 @@ const reducerActions = {
       ...prevState,
       language: newLanguage
     }
+  },
+
+  TOGGLE_MENU: ({ prevState }: IReducerActions<IAppContext>) => {
+    return {
+      ...prevState,
+      menuOpen: !prevState?.menuOpen
+    }
   }
+}
+
+export const ReducerActionsKeys = {
+  TOGGLE_THEME: 'TOGGLE_THEME',
+  CHANGE_LANGUAGE: 'CHANGE_LANGUAGE',
+  TOGGLE_MENU: 'TOGGLE_MENU'
 }
 
 export const AppReducer = (
   prevState: IAppContext,
-  { actionType, newValue }: IReducer<keyof typeof AppReducerActions>
+  { actionType, newValue }: IReducer<keyof typeof reducerActions>
 ) => reducerActions[actionType]({ prevState, newValue })

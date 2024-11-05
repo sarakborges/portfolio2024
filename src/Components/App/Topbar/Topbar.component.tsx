@@ -1,4 +1,6 @@
-import TopbarMenuComponent from '@/Components/App/TopbarMenu'
+import TopbarMenuComponent from '@/Components/App/TopbarActions'
+import SocialLinksComponent from '@/Components/App/SocialLinks'
+
 import PictureComponent from '@/Components/System/Picture'
 
 import './Topbar.style.scss'
@@ -7,7 +9,11 @@ const TopbarComponent: React.FC = () => {
   return (
     <nav id="topbar">
       <section className="topbar-wrapper">
-        <PictureComponent src="picture.png" alt="Profile picture" round />
+        <section>
+          <PictureComponent src="picture.jpg" alt="Profile picture" round />
+          <SocialLinksComponent />
+        </section>
+
         <TopbarMenuComponent />
       </section>
     </nav>

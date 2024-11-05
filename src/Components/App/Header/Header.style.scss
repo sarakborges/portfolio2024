@@ -1,0 +1,64 @@
+#header {
+  display: flex;
+  flex-flow: column;
+  place-items: center;
+
+  width: 100%;
+  padding: var(--size-xl);
+
+  background-color: var(--color-primary);
+
+  color: var(--color-light);
+
+  > .header-wrapper {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    gap: var(--size-xl);
+
+    width: var(--body-wrapper);
+    padding: var(--size-xl) var(--size-xl) var(--size-lg);
+
+    > article {
+      display: flex;
+      flex-flow: column;
+      place-items: center;
+
+      > * {
+        width: 100%;
+      }
+
+      > h1 {
+        letter-spacing: var(--size-xs);
+        font-size: var(--size-xl);
+        font-weight: var(--font-weight-light);
+      }
+
+      > h2 {
+        padding: var(--size-smd) 0 var(--size-lmd);
+
+        letter-spacing: var(--size-xs);
+        font-size: var(--size-lmd);
+      }
+
+      > h3 {
+        letter-spacing: var(--size-xs);
+        font-size: var(--size-md);
+        line-height: var(--line-height-md);
+        white-space: pre-wrap;
+      }
+    }
+
+    > picture {
+      width: calc(var(--size-xl) * 4);
+    }
+  }
+
+  @media (width < 600px) {
+    > .header-wrapper {
+      flex-flow: column;
+
+      padding: 0;
+    }
+  }
+}

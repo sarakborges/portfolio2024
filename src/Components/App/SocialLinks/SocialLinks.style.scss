@@ -1,0 +1,35 @@
+.social-links {
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  > li {
+    > p {
+      padding-right: var(--size-md);
+
+      font-size: var(--size-lmd);
+      font-weight: var(--font-weight-light);
+    }
+
+    > a {
+      padding: var(--size-smd);
+
+      > svg {
+        width: var(--size-lmd);
+        height: var(--size-lmd);
+
+        fill: var(--font-color);
+
+        transition: fill 0.3s;
+      }
+
+      &:hover > svg {
+        fill: var(--color-primary);
+      }
+    }
+  }
+
+  @media (width < 600px) {
+    padding-left: var(--size-sm);
+  }
+}

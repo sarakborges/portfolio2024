@@ -1,18 +1,17 @@
-.topbar-menu {
+.topbar-actions {
   display: flex;
   place-items: center;
+  gap: var(--size-lmd);
 
   padding: 0 var(--size-sm);
 
   > li {
     &.toggle-theme-wrapper {
-      padding: var(--size-sm) 0 var(--size-sm) var(--size-md);
+      padding: var(--size-sm) 0;
     }
 
     &.change-language-wrapper {
       display: flex;
-
-      padding-left: var(--size-md);
     }
 
     > a {

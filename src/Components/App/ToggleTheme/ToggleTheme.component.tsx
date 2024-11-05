@@ -4,7 +4,7 @@ import { FaMoon, FaSun } from 'react-icons/fa'
 import { DARK_THEME, LIGHT_THEME } from '@/Consts'
 
 import { AppContext } from '@/Contexts/App.context'
-import { AppReducerActions } from '@/Reducers/App.reducer'
+import { ReducerActionsKeys } from '@/Reducers/App.reducer'
 
 import ButtonComponent from '@/Components/System/Button'
 
@@ -15,7 +15,7 @@ const ToggleThemeComponent: React.FC = () => {
 
   const toggleTheme = () => {
     appDispatch({
-      actionType: AppReducerActions.TOGGLE_THEME
+      actionType: ReducerActionsKeys.TOGGLE_THEME
     })
   }
 

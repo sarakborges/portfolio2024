@@ -18,7 +18,8 @@ interface IinitialState {
 const initialState: IinitialState = {
   appValue: {
     theme: DARK_THEME,
-    language: LANGUAGE_EN
+    language: LANGUAGE_EN,
+    menuOpen: false
   },
 
   appDispatch: () => {}
