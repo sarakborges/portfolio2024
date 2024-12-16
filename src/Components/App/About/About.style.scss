@@ -3,6 +3,7 @@
   place-content: center;
 
   width: 100%;
+  padding: 0 var(--size-xl);
 
   background-color: var(--color-primary);
 
@@ -15,7 +16,7 @@
     gap: var(--size-lmd);
 
     width: var(--body-wrapper);
-    padding: 0 var(--size-xl) var(--size-xl);
+    padding-bottom: var(--size-xl);
 
     > p {
       font-size: var(--size-md);

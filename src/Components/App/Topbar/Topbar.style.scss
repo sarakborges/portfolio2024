@@ -19,32 +19,5 @@
     place-items: center;
 
     width: var(--body-wrapper);
-
-    > section {
-      display: flex;
-      place-items: center;
-      gap: var(--size-md);
-
-      > .picture-component {
-        width: var(--size-xl);
-      }
-
-      > .button-component {
-        display: none;
-
-        > svg {
-          width: var(--size-lg);
-          height: var(--size-lg);
-        }
-      }
-    }
-
-    @media (width < 600px) {
-      > section {
-        > .picture-component {
-          display: none;
-        }
-      }
-    }
   }
 }

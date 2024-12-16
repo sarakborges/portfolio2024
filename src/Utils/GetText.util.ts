@@ -5,19 +5,14 @@ import * as PT_TEXT from '@/Texts/Pt'
 
 import { AppContext } from '@/Contexts/App.context'
 
-export const getText = (key: string) => {
+export const getText = (key: keyof typeof EN_TEXT) => {
   const { appValue } = useContext(AppContext)
-  const language = appValue.language || 'en'
+  const language: 'pt' | 'en' = (appValue.language as 'pt' | 'en') || 'pt'
 
-  if (language === 'en') {
-    const enKey = key as keyof typeof EN_TEXT
-    return EN_TEXT[enKey]
+  const texts = {
+    en: { ...EN_TEXT },
+    pt: { ...PT_TEXT }
   }
 
-  if (language === 'pt') {
-    const ptKey = key as keyof typeof PT_TEXT
-    return PT_TEXT[ptKey]
-  }
-
-  return ''
+  return texts[language][key] || ''
 }

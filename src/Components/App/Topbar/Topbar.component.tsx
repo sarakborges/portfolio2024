@@ -9,11 +9,7 @@ const TopbarComponent: React.FC = () => {
   return (
     <nav id="topbar">
       <section className="topbar-wrapper">
-        <section>
-          <PictureComponent src="picture.jpg" alt="Profile picture" round />
-          <SocialLinksComponent />
-        </section>
-
+        <SocialLinksComponent />
         <TopbarMenuComponent />
       </section>
     </nav>
