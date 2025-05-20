@@ -10,7 +10,7 @@ const HeaderComponent: React.FC = () => {
   return (
     <header id="header">
       <section className="header-wrapper">
-        <PictureComponent src="picture.jpg" alt="Profile picture" round />
+        <PictureComponent src="picture.jpeg" alt="Profile picture" round />
 
         <article>
           <h1>{getText(NAME)}</h1>

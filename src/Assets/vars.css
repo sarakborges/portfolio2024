@@ -1,11 +1,11 @@
 :root {
-  --color-primary: #3d2bb3;
+  --color-primary: #5b2bb3;
   --color-secondary: #209da3;
   --color-cancel: #fd49a0;
   --color-light: #c9c6e2;
 
-  --button-text-color: #e4e1e8;
-  --button-primary-disabled: #443d6f;
+  --button-text-color: #d4c8e4;
+  --button-primary-disabled: #705c8f;
   --button-secondary-disabled: #6d9a9d;
   --button-cancel-disabled: #ce90ae;
 
@@ -17,7 +17,7 @@
   --size-lg: 36px;
   --size-xl: 48px;
 
-  --body-wrapper: clamp(320px, 1160px, 100%);
+  --body-wrapper: clamp(320px, 960px, 100%);
 
   --font-weight-light: 300;
   --font-weight-normal: 400;

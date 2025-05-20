@@ -1,4 +1,10 @@
-import { BsGithub, BsInstagram, BsLinkedin, BsWhatsapp } from 'react-icons/bs'
+import {
+  BsEnvelopeAtFill,
+  BsGithub,
+  BsInstagram,
+  BsLinkedin,
+  BsWhatsapp
+} from 'react-icons/bs'
 
 export const SOCIAL_LINKS = [
   {
@@ -11,6 +17,12 @@ export const SOCIAL_LINKS = [
     ID: `Linkedin`,
     ICON: <BsLinkedin />,
     LINK: `https://www.linkedin.com/in/sarakborges/`
+  },
+
+  {
+    ID: `Email`,
+    ICON: <BsEnvelopeAtFill />,
+    LINK: `mailto:sarakborges@outlook.com`
   },
 
   {

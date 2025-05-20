@@ -5,9 +5,11 @@
   width: 100%;
   padding: 0 var(--size-xl);
 
-  background-color: var(--color-primary);
+  background-color: var(--bg-color);
 
-  color: var(--color-light);
+  color: var(--font-color);
+
+  transition: color 0.3s, background-color 0.3s;
 
   > .about-wrapper {
     display: flex;

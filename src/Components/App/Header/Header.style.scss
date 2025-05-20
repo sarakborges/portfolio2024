@@ -6,9 +6,11 @@
   width: 100%;
   padding: var(--size-xl);
 
-  background-color: var(--color-primary);
+  background-color: var(--bg-color);
 
-  color: var(--color-light);
+  color: var(--font-color);
+
+  transition: color 0.3s, background-color 0.3s;
 
   > .header-wrapper {
     display: flex;
@@ -17,7 +19,7 @@
     gap: var(--size-xl);
 
     width: var(--body-wrapper);
-    padding: var(--size-xl) 0;
+    padding: var(--size-md) 0 var(--size-md);
 
     > article {
       display: flex;
@@ -32,6 +34,7 @@
         letter-spacing: var(--size-xs);
         font-size: var(--size-xl);
         font-weight: var(--font-weight-light);
+        color: var(--color-primary);
       }
 
       > h2 {
@@ -39,6 +42,7 @@
 
         letter-spacing: var(--size-xs);
         font-size: var(--size-lmd);
+        color: var(--color-primary);
       }
 
       > h3 {
