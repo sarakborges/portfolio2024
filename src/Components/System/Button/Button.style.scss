@@ -26,30 +26,8 @@
       }
     }
 
-    &.secondary {
-      border-color: var(--color-secondary);
-
-      &:not(.transparent) {
-        background-color: var(--color-secondary);
-      }
-    }
-
-    &.cancel {
-      border-color: var(--color-cancel);
-
-      &:not(.transparent) {
-        background-color: var(--color-cancel);
-      }
-    }
-
-    &.transparent {
-      background-color: transparent;
-    }
-
-    &:not(.transparent) {
-      &:hover {
-        opacity: 0.75;
-      }
+    &:hover {
+      opacity: 0.75;
     }
   }
 
@@ -57,16 +35,6 @@
     &.primary {
       border-color: var(--button-primary-disabled);
       background-color: var(--button-primary-disabled);
-    }
-
-    &.secondary {
-      border-color: var(--button-secondary-disabled);
-      background-color: var(--button-secondary-disabled);
-    }
-
-    &.cancel {
-      border-color: var(--button-cancel-disabled);
-      background-color: var(--button-cancel-disabled);
     }
   }
 }

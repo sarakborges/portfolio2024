@@ -1,0 +1,54 @@
+#work-experiences {
+  display: flex;
+  place-content: center;
+
+  width: 100%;
+  padding: 0 var(--size-xl);
+
+  > .work-experiences-wrapper {
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+    gap: var(--size-lmd);
+
+    width: var(--body-wrapper);
+    padding: var(--size-xl) 0;
+
+    > h2 {
+      font-size: var(--size-lg);
+      color: var(--color-primary);
+    }
+
+    > ul {
+      display: flex;
+      flex-flow: column;
+      gap: var(--size-lg);
+
+      width: 100%;
+
+      > li {
+        display: flex;
+        flex-flow: column;
+        place-content: flex-start;
+        gap: var(--size-smd);
+
+        > h3 {
+          font-size: var(--size-lmd);
+          color: var(--color-secondary);
+        }
+
+        > h4 {
+          font-size: var(--size-md);
+          font-weight: var(--font-weight-bold);
+          line-height: var(--line-height-md);
+        }
+
+        > p {
+          font-size: var(--size-md);
+          line-height: var(--line-height-lg);
+          white-space: pre-wrap;
+        }
+      }
+    }
+  }
+}

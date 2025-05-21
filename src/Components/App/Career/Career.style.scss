@@ -1,0 +1,28 @@
+#career {
+  display: flex;
+  place-content: center;
+
+  width: 100%;
+  padding: 0 var(--size-xl);
+
+  > .career-wrapper {
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+    gap: var(--size-lmd);
+
+    width: var(--body-wrapper);
+    padding: var(--size-xl) 0;
+
+    > h2 {
+      font-size: var(--size-lg);
+      color: var(--color-primary);
+    }
+
+    > p {
+      font-size: var(--size-md);
+      line-height: var(--line-height-lg);
+      white-space: pre-wrap;
+    }
+  }
+}

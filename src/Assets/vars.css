@@ -1,13 +1,10 @@
 :root {
   --color-primary: #5b2bb3;
-  --color-secondary: #209da3;
-  --color-cancel: #fd49a0;
+  --color-secondary: #b4099d;
   --color-light: #c9c6e2;
 
   --button-text-color: #d4c8e4;
   --button-primary-disabled: #705c8f;
-  --button-secondary-disabled: #6d9a9d;
-  --button-cancel-disabled: #ce90ae;
 
   --size-xs: 4px;
   --size-sm: 8px;

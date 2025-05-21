@@ -5,14 +5,12 @@ import './Button.style.scss'
 const ButtonComponent: React.FC<IButtonComponent> = ({
   children,
   style,
-  transparent,
   round,
   ...rest
 }) => {
   const buttonClasses = [
     'button-component',
     style || 'primary',
-    transparent ? 'transparent' : '',
     round ? 'round' : ''
   ].join(' ')
 
